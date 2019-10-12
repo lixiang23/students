@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context.xsd">
+     <!-- author:admin  createTime:2019年6月3日09:58:10 version:1.0 -->
+    <!-- 配置注解的扫描 	-->
+	<context:component-scan base-package="cn.com.ssm.contrll"/>
+		<!-- 配置多动作控制器bean -->
+		<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+			<property name="prefix">
+				<value>/</value>
+			</property>
+			<property name="suffix">
+				<value>.jsp</value>
+			</property>
+			</bean> 
+</beans>
